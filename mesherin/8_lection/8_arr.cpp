@@ -1,7 +1,7 @@
 Массивы переменной длины в с++ запрещены(выдаёт warning)
 
 #include <iostream>
-int main(int argc, char *argv[])
+int main()
 {
 	int n;
 	std::cin >> n;
