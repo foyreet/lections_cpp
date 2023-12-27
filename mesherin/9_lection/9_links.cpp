@@ -94,7 +94,7 @@ void swap (int& x, int& y) {
 
 /*
  Битая ссылка (dangling reference)
- */
+
 int& f(int& x) {
   int y = ++x;
   return y;
@@ -104,3 +104,13 @@ int main() {
   int& y = f(x);
 }
 // Это UB
+ */
+int main() {
+  int x = 0;
+  int *p = &x;
+  int *&p2 = p;
+  int a[10];
+  int(&b)[10] = a; // ссылка на массив
+  std::cout << p2;
+  // Нельзя создать массив из ссылок
+}
