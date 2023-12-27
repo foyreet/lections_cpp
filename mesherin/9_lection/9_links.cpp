@@ -72,9 +72,6 @@ void swap (int& x, int& y) {
   y = t;
 }
 
-int main() {
-
-}
 /*
  Ссылки нельзя оставлять без инициализации int& r; будет CE
  Ссылку нужно обязательно проинициализировать при создании. Ссылку нужно обязательно проинициализировать lvalue,а не rvalue
@@ -89,5 +86,21 @@ int main() {
   g(x) = 6;
   v[x] = 6;
   На самом деле в с++ [] - должны возвращать ссылку и тогда результату можно будет присваивать
-
+ [] - дают другой способ именовать то что лежит под ними
+ int t = g(x); // lvalue-to-rvalue conversion
+ int x = y; // lvalue-to-rvalue conversion
+ *p = *p1; // *p - возьми ячейку(lvalue); *p1 - возьми значение из ячейки(rvalue) lvalue-to-rvalue conversion (ячейка - lvalue; значение из ячейки - rvalue)
  */
+
+/*
+ Битая ссылка (dangling reference)
+ */
+int& f(int& x) {
+  int y = ++x;
+  return y;
+}
+int main() {
+  int x = 0;
+  int& y = f(x);
+}
+// Это UB
