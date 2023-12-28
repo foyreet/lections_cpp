@@ -67,6 +67,8 @@ int main() {
 */
 #include <iostream>
 #include <algorithm>
+#include <stdarg.h>
+
 bool cmp(int x, int y) {
     return x < y;
 }
@@ -74,9 +76,14 @@ bool cmp(int x, int y) {
 void f(int) {}
 void f(double) {}
 
+void func(int a...) {
+    std::cout << a;
+}
+
 int main() {
-    void (*p)(int) = &f;
-    void (*p2)(double) = &f;
-    std::cout << (void*)p << " " << (void*)p2 << '\n';
- }
+//    void (*p)(int) = &f;
+//    void (*p2)(double) = &f;
+//    std::cout << (void*)p << " " << (void*)p2 << '\n';
+    func(1, 2, 3);
+}
 
