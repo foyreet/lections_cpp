@@ -13,3 +13,6 @@ add_executable(9_lection mesherin/9_lection/9_links.cpp)
 add_executable(A "yandex_algos/algos_1_0/training 1/A.cpp")
 add_executable(B "yandex_algos/algos_1_0/training 1/B.cpp")
 add_executable(C "yandex_algos/algos_1_0/training 1/C.cpp")
+
+add_executable(1895A codeforces/1895A.cpp)
+add_executable(1883A codeforces/1883A.cpp)
