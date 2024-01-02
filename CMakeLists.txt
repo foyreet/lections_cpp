@@ -23,3 +23,5 @@ add_executable(2C "yandex_algos/algos_2_0_B/2C.cpp")
 add_executable(git "mesherin/git/git_introduction.cpp")
 add_executable(oop "mesherin/12 lection/oop.cpp")
 add_executable(friends "mesherin/13 lection/friends.cpp")
+
+
