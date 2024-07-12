@@ -25,3 +25,5 @@ add_executable(oop "mesherin/12 lection/oop.cpp")
 add_executable(friends "mesherin/13 lection/friends.cpp")
 
 
+add_executable(constants_constant_pointers_and_references mesherin/10_lection/constants_constant_pointers_and_references.cpp)
+add_executable(1_lection mesherin/1_lection/1_lection.cpp)
